@@ -6,7 +6,7 @@ import UserForm from "./components/UserForm";
 // import UserSearch from "./components/UserSearch";
 import UserList from "./components/UserList";
 import { ToastContainer } from "react-toastify";
-// import AppRouter from "./router/AppRouter";
+import AppRouter from "./router/AppRouter";
 // import store from "./app/store";
 
 const store = createStore(userReducer);
@@ -15,7 +15,7 @@ const App = () => {
   return (
     <Provider store={store}>
       <div className="App">
-        {/* <AppRouter/> */}
+        <AppRouter/>
         <UserForm />
         {/* <UserSearch/> */}
         <UserList/>

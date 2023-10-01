@@ -37,7 +37,7 @@ router.get("/api/users", async (req, res) => {
 
 
 // Kullanıcıları ekleme işlemi
-router.post("/api/users", (req, res) => {
+router.post("/api/users",  (req, res) => {
   const newUser = new User(req.body);
   newUser.save((err, user) => {
     if (err) {
