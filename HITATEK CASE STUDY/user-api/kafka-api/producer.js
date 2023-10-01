@@ -1,4 +1,11 @@
 // producer.js
+
+"use strict";
+
+/* -------------------------------------------------------
+    EXPRESSJS - USERS MANAGEMENT
+------------------------------------------------------- */
+
 const kafka = require("kafka-node");
 const Producer = kafka.Producer;
 const client = new kafka.KafkaClient({ kafkaHost: "localhost:9092" }); // Kafka bağlantısı
@@ -27,3 +34,5 @@ producer.on("ready", () => {
 producer.on("error", (error) => {
   console.error("Kafka producer error:", error);
 });
+
+module.exports = producer;

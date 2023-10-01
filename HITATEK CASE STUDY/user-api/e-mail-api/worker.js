@@ -1,4 +1,11 @@
 // worker.js
+
+"use strict";
+
+/* -------------------------------------------------------
+    EXPRESSJS - USERS MANAGEMENT
+------------------------------------------------------- */
+
 const Queue = require("bull");
 const nodemailer = require("nodemailer");
 

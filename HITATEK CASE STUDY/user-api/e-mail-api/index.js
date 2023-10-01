@@ -1,4 +1,11 @@
 // index.js
+
+"use strict";
+
+/* -------------------------------------------------------
+    EXPRESSJS - USERS MANAGEMENT
+------------------------------------------------------- */
+
 const app = require("./app");
 const worker = require("./worker");
 

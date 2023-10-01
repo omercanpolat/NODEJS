@@ -1,4 +1,12 @@
 // app.js
+
+
+"use strict";
+
+/* -------------------------------------------------------
+    EXPRESSJS - USERS MANAGEMENT
+------------------------------------------------------- */
+
 const express = require("express");
 const bodyParser = require("body-parser");
 const { queue } = require("./worker"); // worker.js dosyasını içe aktarın

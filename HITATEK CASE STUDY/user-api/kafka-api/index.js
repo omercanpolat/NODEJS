@@ -1,3 +1,10 @@
 // index.js
-const producer = require("./producer");
-const consumer = require("./consumer");
+
+"use strict";
+
+/* -------------------------------------------------------
+    EXPRESSJS - USERS MANAGEMENT
+------------------------------------------------------- */
+
+const producer = require("../kafka-api/producer");
+const consumer = require("../kafka-api/consumer");

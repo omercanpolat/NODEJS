@@ -1,4 +1,11 @@
 // consumer.js
+
+"use strict";
+
+/* -------------------------------------------------------
+    EXPRESSJS - USERS MANAGEMENT
+------------------------------------------------------- */
+
 const kafka = require("kafka-node");
 const Consumer = kafka.Consumer;
 const mongoose = require("mongoose");
@@ -41,3 +48,5 @@ consumer.on("message", async (message) => {
 consumer.on("error", (error) => {
   console.error("Kafka consumer error:", error);
 });
+
+module.exports = consumer;
