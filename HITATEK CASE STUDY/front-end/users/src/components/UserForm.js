@@ -9,18 +9,18 @@ const UserForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Form girişlerini doğrulama yapabilirsiniz
+    // Form girişlerini doğrulama yapabiliriz
 
-    // Yeni kullanıcıyı oluşturun
+    // Yeni kullanıcıyı oluştur
     const newUser = {
       name,
       email,
     };
 
-    // Redux ile kullanıcıyı ekleyin
+    // Redux ile kullanıcıyı ekle
     dispatch(addUser(newUser));
 
-    // Formu sıfırlayın
+    // Formu sıfırla
     setName("");
     setEmail("");
   };

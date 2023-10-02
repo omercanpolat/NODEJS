@@ -20,7 +20,6 @@ const App = () => {
         {/* <UserSearch/> */}
         <UserList/>
         <ToastContainer/>
-        {/* Diğer bileşenleri buraya ekleyebilirsiniz */}
       </div>
     </Provider>
   );

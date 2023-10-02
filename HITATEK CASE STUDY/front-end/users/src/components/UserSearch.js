@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { sendBulkEmail } from "../../src/components/actions";
-// import { sendBulkEmail } from "/Users/omerc/Documents/CLARUSWAY/NODEJS/HITATEK CASE STUDY/user-api/e-mail-api/index";
 
 const UserSearch = () => {
   const users = useSelector((state) => state.users);
@@ -38,7 +37,7 @@ const UserSearch = () => {
         <input
           type="text"
           placeholder="Kullanıcı ara..."
-          // Kullanıcıları burada arayabilirsiniz
+          // Kullanıcıları burada arayabiliriz
         />
       </div>
       <div>
