@@ -29,7 +29,7 @@ app.use(bodyParser.json());
 // Accept json data:
 app.use(express.json())
 
-app.use(require("../user-api/models/user.router"));
+app.use(require("./routes/user.router"));
 
 // User modelini tanımlayalım (models/user.js)
 const userSchema = new mongoose.Schema({

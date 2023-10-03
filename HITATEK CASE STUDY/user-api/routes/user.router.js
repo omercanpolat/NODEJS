@@ -4,7 +4,7 @@
 ------------------------------------------------------- */
 const router = require("express").Router();
 
-const User = require("./user");
+const User = require("../models/user");
 
 // LIST:
 
@@ -37,7 +37,7 @@ router.get("/api/users", async (req, res) => {
 
 
 // Kullanıcıları ekleme işlemi
-router.post("/api/users",  (req, res) => {
+router.post("/api/users", (req, res) => {
   const newUser = new User(req.body);
   newUser.save((err, user) => {
     if (err) {

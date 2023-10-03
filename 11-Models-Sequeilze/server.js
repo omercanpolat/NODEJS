@@ -10,7 +10,7 @@ require("dotenv").config();
 const PORT = process.env.PORT || 8000;
 
 /* ------------------------------------------------------- */
-// Accept json data:
+// Accept json data & convert to object:
 app.use(express.json())
 
 // app.all('/', (req, res) => {
