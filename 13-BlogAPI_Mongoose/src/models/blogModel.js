@@ -23,8 +23,8 @@ const nameSchema = new mongoose.Schema({
         required: [true, 'Error-Message'], // JSON data içinde gelmesi zorunlu mu?
         enum: [[0, 1, 2, 3], 'Error-Message'], // Pattern/Constraint/Limit/Choices
         validate: [function(data) { return true }, 'Error-Message'], // Veriyi filtreden geçiren fonksiyon.
-        get: function(data) { return true }, // Veri çağırırken çalıştırılacak fonksiyon
-        set: function(data) { return true }, // Veri kaydederken çalıştırılacak fonksiyon
+        get: function(data) { return data }, // Veri çağırırken çalıştırılacak fonksiyon
+        set: function(data) { return data }, // Veri kaydederken çalıştırılacak fonksiyon
     }
 
 }, {

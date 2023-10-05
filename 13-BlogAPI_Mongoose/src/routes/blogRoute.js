@@ -4,7 +4,7 @@
 ------------------------------------------------------- */
 const router = require('express').Router()
 
-// Call Controlers:
+// Call Controllers:
 const { BlogPost } = require('../controllers/blogController')
 
 // ------------------------------------------

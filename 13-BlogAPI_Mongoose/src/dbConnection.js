@@ -5,7 +5,7 @@
 
 const mongoose = require('mongoose')
 
-// const MONGODB = process.env.MONGODB || 'mongodb://localhost:27017/'
+// const MONGODB = process.env.MONGODB || 'mongodb://localhost:27017/blogAPI'
 // mongoose.connect(MONGODB)
 
 mongoose.connect(process.env.MONGODB)
