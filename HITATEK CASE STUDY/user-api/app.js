@@ -26,7 +26,7 @@ require('../user-api/dbConnection')
 
 // HomePage:
 app.all('/', (req, res) => {
-    res.send('WELCOME TO BLOG API')
+    res.send('WELCOME TO USERS MANAGEMENT API')
 })
 
 // Routes:
