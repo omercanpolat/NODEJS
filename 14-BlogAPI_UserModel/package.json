@@ -1,7 +1,7 @@
 {
-  "name": "13-blogapi_mongoose",
+  "name": "14-blogapi_usermodel",
   "version": "1.0.0",
-  "description": "## MONGOOSE",
+  "description": "https://mongoosejs.com/",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -10,9 +10,10 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "cookie-session": "^2.0.0",
     "dotenv": "^16.3.1",
     "express": "^4.18.2",
     "express-async-errors": "^3.1.1",
-    "mongoose": "^7.5.3"
+    "mongoose": "^7.5.4"
   }
 }
