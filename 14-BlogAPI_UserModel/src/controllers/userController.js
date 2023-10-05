@@ -78,17 +78,18 @@ module.exports.User = {
         if (email && password) {
 
             // const user = await User.findOne({ email: email, password: passwordEncrypt(password) })
-            // No need passwordEncrypt, because use "set" in model:
+            // No need passwordEncrypt, because using "set" in model:
             const user = await User.findOne({ email: email, password: password })
             if (user) {
 
+                // Set Session:
                 req.session = {
                     user: {
                         email: user.email,
                         password: user.password
                     }
                 }
-
+                // Set Cookie:
                 if (req.body?.rememberMe) {
                     // Set Cookie maxAge:
                     req.sessionOptions.maxAge = 1000 * 60 * 60 * 24 * 3 // 3 Days
@@ -117,12 +118,11 @@ module.exports.User = {
     },
 
     logout: async (req, res) => {
-        // Session to undefined:
-        // req.session.destroy() // express-session
-        req.session = null // cookie-session
+        // Set session to null:
+        req.session = null
         res.status(200).send({
             error: false,
-            message: 'Logout'
+            message: 'Logout OK'
         })
     },
 }
