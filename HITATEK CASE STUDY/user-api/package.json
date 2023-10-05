@@ -21,6 +21,7 @@
     "nodemailer": "^6.9.5",
     "redis": "^4.6.10",
     "sequelize": "^6.33.0",
-    "sqlite3": "^5.1.6"
+    "sqlite3": "^5.1.6",
+    "worker": "^0.4.0"
   }
 }
