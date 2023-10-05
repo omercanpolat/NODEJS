@@ -1,46 +1,50 @@
 // app.js
-
 "use strict";
 
 /* -------------------------------------------------------
     EXPRESSJS - USERS MANAGEMENT
 ------------------------------------------------------- */
+/*
+ * $ npm init -y
+ * $ npm i express dotenv express-async-errors
+ * $ npm i mongoose
+*/
 
 const express = require("express");
-const mongoose = require("mongoose");
-const bodyParser = require("body-parser");
-// const User = require("./models/user");
-
 const app = express();
-require("dotenv").config();
-const port = process.env.PORT || 3000;
 
-mongoose
-  .connect("mongodb://localhost/user-api", {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-  })
-  .then(() => console.log("MongoDB connected"))
-  .catch((err) => console.error(err));
+require("dotenv").config();
+const PORT = process.env.PORT || 3000;
+
+/* ------------------------------------------------------- */
+
+// Accept json data:
+app.use(express.json())
+
+// Connect to MongoDB with Mongoose:
+require('../user-api/dbConnection')
+
+// HomePage:
+app.all('/', (req, res) => {
+    res.send('WELCOME TO BLOG API')
+})
+
+// Routes:
+app.use('/users', require('./routes/router'))
+
+// errorHandler:
+app.use(require('../user-api/errorHandler'))
+
+
+/* ------------------------------------------------------- */
+const bodyParser = require("body-parser");
+const User = require("./models/user");
+
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 /* ------------------------------------------------------- */
-// Accept json data:
-app.use(express.json())
 
-app.use(require("./routes/user.router"));
 
-// User modelini tanımlayalım (models/user.js)
-const userSchema = new mongoose.Schema({
-  name: String,
-  email: String,
-  // Diğer kullanıcı alanlarını da ekleyebiliriz.
-});
 
-const User = mongoose.model("User", userSchema);
-
-/* ------------------------------------------------------- */
-app.listen(port, () => {
-  console.log(`Server started on port ${port}`);
-});
+app.listen(PORT, () => console.log("Running: http://127.0.0.1:" + PORT));
