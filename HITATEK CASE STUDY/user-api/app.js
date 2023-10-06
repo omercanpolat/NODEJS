@@ -13,6 +13,22 @@ const PORT = process.env.PORT || 3000;
 
 /* ------------------------------------------------------- */
 
+/* ------------------------------------------------------- */
+// SessionCookies:
+// http://expressjs.com/en/resources/middleware/cookie-session.html
+// https://www.npmjs.com/package/cookie-session
+//* $ npm i cookie-session
+const session = require("cookie-session")
+
+app.use(session({
+    secret: process.env.SECRET_KEY || 'secret_keys_for_cookies',
+    // name: 'cookie', // default: req.session
+    // maxAge: 1000 * 60 * 60 * 24 // 1 day (miliseconds)
+}))
+/* ------------------------------------------------------- */
+
+
+
 // Accept json data:
 app.use(express.json())
 
