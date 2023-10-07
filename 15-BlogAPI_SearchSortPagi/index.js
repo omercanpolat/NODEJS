@@ -20,18 +20,16 @@ const PORT = process.env.PORT || 8000
 // https://www.npmjs.com/package/cookie-session
 //* $ npm i cookie-session
 const session = require("cookie-session")
-
-app.use(session({
-    secret: process.env.SECRET_KEY || 'secret_keys_for_cookies',
-    // name: 'cookie', // default: req.session
-    // maxAge: 1000 * 60 * 60 * 24 // 1 day (miliseconds)
-}))
+app.use(session({ secret: process.env.SECRET_KEY || 'secret_keys_for_cookies' }))
 /* ------------------------------------------------------- */
 
 app.use(express.json())
 
 // Connect to MongoDB with Mongoose:
 require('./src/dbConnection')
+
+// Searching&Sorting&Pagination:
+app.use(require('./src/middlewares/findSearchSortPage'))
 
 // HomePage:
 app.all('/', (req, res) => {
@@ -44,7 +42,7 @@ app.use('/blog', require('./src/routes/blogRoute'))
 
 /* ------------------------------------------------------- */
 // Synchronization:
-require('./src/sync')()
+// require('./src/sync')()
 
 // errorHandler:
 app.use(require('./src/errorHandler'))
