@@ -7,11 +7,16 @@ const Personnel = require('../models/personnel.model')
 
 module.exports = async function(userData, withRefresh = true) {
 
-    const { username, password } = userData
+    let { username, password } = userData
     
     if (username && password) {
     
         const user = await Personnel.findOne({ username })
+        
+        if (withRefresh) {
+            const passwordEncrypt = require('./passwordEncrypt')
+            password = passwordEncrypt(password)
+        }
     
         if (user && user.password == password) {
     
