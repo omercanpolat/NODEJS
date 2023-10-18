@@ -4,34 +4,34 @@
 ------------------------------------------------------- */
 const router = require('express').Router()
 /* ------------------------------------------------------- */
-// routes/order:
+// routes/reservation:
 
 const permissions = require('../middlewares/permissions')
-const order = require('../controllers/order')
+const reservation = require('../controllers/reservation')
 
-// URL: /orders
+// URL: /reservations
 
 // router.route('/')
-//     .get(permissions.isLogin, order.list)
-//     .post(permissions.isLogin, order.create)
+//     .get(permissions.isLogin, reservation.list)
+//     .post(permissions.isLogin, reservation.create)
 
 // router.route('/:id')
-//     .get(permissions.isLogin, order.read)
+//     .get(permissions.isLogin, reservation.read)
 //     .put(permissions.isLogin, rder.update)
-//     .patch(permissions.isLogin, order.update)
-//     .delete(permissions.isAdmin, order.delete)
+//     .patch(permissions.isLogin, reservation.update)
+//     .delete(permissions.isAdmin, reservation.delete)
 
 router.use(permissions.isLogin)
 
 router.route('/')
-    .get(order.list)
-    .post(order.create)
+    .get(reservation.list)
+    .post(reservation.create)
 
 router.route('/:id')
-    .get(order.read)
-    .put(order.update)
-    .patch(order.update)
-    .delete(permissions.isAdmin, order.delete)
+    .get(reservation.read)
+    .put(reservation.update)
+    .patch(reservation.update)
+    .delete(permissions.isAdmin, reservation.delete)
 
 /* ------------------------------------------------------- */
 module.exports = router

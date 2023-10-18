@@ -9,17 +9,19 @@ const jwt = require('jsonwebtoken')
 
 module.exports = (req, res, next) => {
 
-    // const accessToken = req.headers?.authorization.replaceAll('Bearer ')
-    const auth = req.headers?.authorization // Bearer ...token...
-    const accessToken = auth ? auth.split(' ')[1] : null // ['Bearer', '...token...']
+    const auth = req.headers?.authorization || null
+    const accessToken = auth ? auth.split(' ')[1] : null
 
     req.isLogin = false
     req.user = null
 
-    jwt.verify(accessToken, process.env.ACCESS_KEY, function (err, userData) {
-        if (userData && userData.isActive) {
+    jwt.verify(accessToken, process.env.ACCESS_KEY, function (err, user) {
+        if (err) {
+            res.errorStatusCode = 401
+            return next(err)
+        } else {
             req.isLogin = true
-            req.user = userData
+            req.user = user
         }
     })
     next()
