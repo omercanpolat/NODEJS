@@ -24,8 +24,10 @@ const FlightSchema = new mongoose.Schema(
     },
 
     departureCity: {
-      type: BigInt,
+      type: String,
+      trim: true,
       required: true,
+      unique: true,
     },
 
     departureDate: {
@@ -34,8 +36,11 @@ const FlightSchema = new mongoose.Schema(
     },
 
     arrivalCity: {
-      type: BigInt,
+      type: String,
+      trim: true,
       required: true,
+      unique: true,
+   
     },
 
     arrivalDate: {
