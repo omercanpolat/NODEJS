@@ -151,7 +151,7 @@
           "Users"
         ],
         "summary": "List Users",
-        "description": "  You can send query with endpoint for search[], sort[], page and limit.  <ul> Examples:   <li>URL/?<b>search[field1]=value1&search[field2]=value2</b></li>   <li>URL/?<b>sort[field1]=1&sort[field2]=-1</b></li>   <li>URL/?<b>page=2&limit=1</b></li>  </ul>  ",
+        "description": "\r  You can send query with endpoint for search[], sort[], page and limit.\r  <ul> Examples:\r   <li>URL/?<b>search[field1]=value1&search[field2]=value2</b></li>\r   <li>URL/?<b>sort[field1]=1&sort[field2]=-1</b></li>\r   <li>URL/?<b>page=2&limit=1</b></li>\r  </ul>\r  ",
         "responses": {
           "200": {
             "description": "OK"
@@ -354,7 +354,7 @@
           "Brands"
         ],
         "summary": "List Brands",
-        "description": "  You can send query with endpoint for search[], sort[], page and limit.  <ul> Examples:   <li>URL/?<b>search[field1]=value1&search[field2]=value2</b></li>   <li>URL/?<b>sort[field1]=1&sort[field2]=-1</b></li>   <li>URL/?<b>page=2&limit=1</b></li>  </ul>  ",
+        "description": "\r  You can send query with endpoint for search[], sort[], page and limit.\r  <ul> Examples:\r   <li>URL/?<b>search[field1]=value1&search[field2]=value2</b></li>\r   <li>URL/?<b>sort[field1]=1&sort[field2]=-1</b></li>\r   <li>URL/?<b>page=2&limit=1</b></li>\r  </ul>\r  ",
         "responses": {
           "200": {
             "description": "OK"
@@ -491,7 +491,7 @@
           "Categories"
         ],
         "summary": "List Categories",
-        "description": "  You can send query with endpoint for search[], sort[], page and limit.  <ul> Examples:   <li>URL/?<b>search[field1]=value1&search[field2]=value2</b></li>   <li>URL/?<b>sort[field1]=1&sort[field2]=-1</b></li>   <li>URL/?<b>page=2&limit=1</b></li>  </ul>  ",
+        "description": "\r  You can send query with endpoint for search[], sort[], page and limit.\r  <ul> Examples:\r   <li>URL/?<b>search[field1]=value1&search[field2]=value2</b></li>\r   <li>URL/?<b>sort[field1]=1&sort[field2]=-1</b></li>\r   <li>URL/?<b>page=2&limit=1</b></li>\r  </ul>\r  ",
         "responses": {
           "200": {
             "description": "OK"
@@ -628,7 +628,7 @@
           "Firms"
         ],
         "summary": "List Firms",
-        "description": "  You can send query with endpoint for search[], sort[], page and limit.  <ul> Examples:   <li>URL/?<b>search[field1]=value1&search[field2]=value2</b></li>   <li>URL/?<b>sort[field1]=1&sort[field2]=-1</b></li>   <li>URL/?<b>page=2&limit=1</b></li>  </ul>  ",
+        "description": "\r  You can send query with endpoint for search[], sort[], page and limit.\r  <ul> Examples:\r   <li>URL/?<b>search[field1]=value1&search[field2]=value2</b></li>\r   <li>URL/?<b>sort[field1]=1&sort[field2]=-1</b></li>\r   <li>URL/?<b>page=2&limit=1</b></li>\r  </ul>\r  ",
         "responses": {
           "200": {
             "description": "OK"
@@ -765,7 +765,7 @@
           "Products"
         ],
         "summary": "List Products",
-        "description": "  You can send query with endpoint for search[], sort[], page and limit.  <ul> Examples:   <li>URL/?<b>search[field1]=value1&search[field2]=value2</b></li>   <li>URL/?<b>sort[field1]=1&sort[field2]=-1</b></li>   <li>URL/?<b>page=2&limit=1</b></li>  </ul>  ",
+        "description": "\r  You can send query with endpoint for search[], sort[], page and limit.\r  <ul> Examples:\r   <li>URL/?<b>search[field1]=value1&search[field2]=value2</b></li>\r   <li>URL/?<b>sort[field1]=1&sort[field2]=-1</b></li>\r   <li>URL/?<b>page=2&limit=1</b></li>\r  </ul>\r  ",
         "responses": {
           "200": {
             "description": "OK"
@@ -902,7 +902,7 @@
           "Purchases"
         ],
         "summary": "List Purchases",
-        "description": "  You can send query with endpoint for search[], sort[], page and limit.  <ul> Examples:   <li>URL/?<b>search[field1]=value1&search[field2]=value2</b></li>   <li>URL/?<b>sort[field1]=1&sort[field2]=-1</b></li>   <li>URL/?<b>page=2&limit=1</b></li>  </ul>  ",
+        "description": "\r  You can send query with endpoint for search[], sort[], page and limit.\r  <ul> Examples:\r   <li>URL/?<b>search[field1]=value1&search[field2]=value2</b></li>\r   <li>URL/?<b>sort[field1]=1&sort[field2]=-1</b></li>\r   <li>URL/?<b>page=2&limit=1</b></li>\r  </ul>\r  ",
         "responses": {
           "200": {
             "description": "OK"
@@ -1039,7 +1039,7 @@
           "Sales"
         ],
         "summary": "List Sales",
-        "description": "  You can send query with endpoint for search[], sort[], page and limit.  <ul> Examples:   <li>URL/?<b>search[field1]=value1&search[field2]=value2</b></li>   <li>URL/?<b>sort[field1]=1&sort[field2]=-1</b></li>   <li>URL/?<b>page=2&limit=1</b></li>  </ul>  ",
+        "description": "\r  You can send query with endpoint for search[], sort[], page and limit.\r  <ul> Examples:\r   <li>URL/?<b>search[field1]=value1&search[field2]=value2</b></li>\r   <li>URL/?<b>sort[field1]=1&sort[field2]=-1</b></li>\r   <li>URL/?<b>page=2&limit=1</b></li>\r  </ul>\r  ",
         "responses": {
           "200": {
             "description": "OK"
